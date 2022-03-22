@@ -1,0 +1,163 @@
+CRITICAL - 2022-03-18 01:31:53 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-18 01:32:47 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-18 01:34:24 --> Class 'App\Controllers\Modeltempbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:36:42 --> Class 'App\Controllers\Modelbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:37:57 --> Class 'App\Controllers\Modelbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:39:30 --> Class 'App\Controllers\Modelbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:44:44 --> Class 'App\Controllers\Modelbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:48:59 --> Class 'App\Controllers\Modelbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:50:44 --> Class 'App\Controllers\Modelbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:51:24 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:52:39 --> Class 'App\Controllers\Modelbarang' not found
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 01:54:21 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->ambilDataBarang()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 03:13:59 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\gudang\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('barangmasuk/ind...')
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('barangmasuk/ind...')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-18 03:17:56 --> Column 'detbrgkode' cannot be null
+CRITICAL - 2022-03-18 03:17:56 --> Column 'detbrgkode' cannot be null
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(89): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->simpanTemp()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-03-18 07:48:16 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\gudang\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('barangmasuk/car...')
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('barangmasuk/car...')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-18 07:48:28 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\gudang\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('barangmasuk/car...')
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('barangmasuk/car...')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-18 07:50:30 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\gudang\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('barangmasuk/ind...')
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('barangmasuk/ind...')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-18 07:55:28 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\gudang\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('barangmasuk/ind...')
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('barangmasuk/ind...')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-18 08:25:31 --> Call to undefined function App\Controllers\inval()
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 08:26:44 --> Call to undefined function App\Controllers\inval()
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-18 08:30:58 --> Call to undefined function App\Controllers\inval()
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

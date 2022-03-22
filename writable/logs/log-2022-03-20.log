@@ -1,0 +1,133 @@
+ERROR - 2022-03-20 20:13:58 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2022-03-20 20:13:58 --> Duplicate entry '1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(183): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-03-20 20:16:03 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2022-03-20 20:16:03 --> Duplicate entry '1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(183): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-03-20 20:16:51 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2022-03-20 20:16:51 --> Duplicate entry '1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(183): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-03-20 20:28:00 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-20 20:28:43 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::emptyTable()
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-20 20:30:14 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::emptyTable()
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2022-03-20 20:50:41 --> BIGINT UNSIGNED value is out of range in '`dbgudang`.`barang`.`brgstok` - NEW.detjml'
+CRITICAL - 2022-03-20 20:50:41 --> BIGINT UNSIGNED value is out of range in '`dbgudang`.`barang`.`brgstok` - NEW.detjml'
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(197): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-03-20 20:51:45 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2022-03-20 20:51:45 --> Duplicate entry '1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(183): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-03-20 20:52:25 --> BIGINT UNSIGNED value is out of range in '`dbgudang`.`barang`.`brgstok` - NEW.detjml'
+CRITICAL - 2022-03-20 20:52:25 --> BIGINT UNSIGNED value is out of range in '`dbgudang`.`barang`.`brgstok` - NEW.detjml'
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(197): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-03-20 20:53:07 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2022-03-20 20:53:07 --> Duplicate entry '1' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudang\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudang\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudang\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudang\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudang\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudang\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\gudang\app\Controllers\Barangmasuk.php(183): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangmasuk->selesaiTransaksi()
+#9 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#10 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
