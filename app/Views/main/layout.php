@@ -128,7 +128,7 @@
                             </ul>
                             <ul class="nav nav-treeview ml-2">
                                 <li class="nav-item">
-                                    <a href="<?= site_url('barangkeluar/index') ?>" class="nav-link">
+                                    <a href="<?= site_url('barangkeluar/data') ?>" class="nav-link">
                                         <i class="fas fa-arrow-left nav-icon text-danger"></i>
                                         <p>Barang Keluar</p>
                                     </a>

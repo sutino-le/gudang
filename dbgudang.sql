@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Mar 2022 pada 14.43
+-- Waktu pembuatan: 23 Mar 2022 pada 10.58
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.26
 
@@ -42,7 +42,21 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`brgkode`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgstok`) VALUES
-('pb001', 'PB 9 mm 4 x 8', 1, 1, 190000, 'pb001.jpg', 256);
+('as', 'PB 9 mm 4 x 80', 1, 1, 200000, 'as.jpg', 0),
+('pb001', 'PB 9 mm 4 x 8', 1, 1, 190000, 'pb001.jpg', 10);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `barangkeluar`
+--
+
+CREATE TABLE `barangkeluar` (
+  `faktur` char(20) NOT NULL,
+  `tglfaktur` date NOT NULL,
+  `idpel` int(11) NOT NULL,
+  `totalharga` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -61,7 +75,22 @@ CREATE TABLE `barangmasuk` (
 --
 
 INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `totalharga`) VALUES
-('1', '2022-03-18', 180000);
+('F-001', '2022-03-22', 1800000);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `detail_barangkeluar`
+--
+
+CREATE TABLE `detail_barangkeluar` (
+  `id` bigint(20) NOT NULL,
+  `detfaktur` char(20) NOT NULL,
+  `detbrgkode` char(20) NOT NULL,
+  `dethargajual` double NOT NULL,
+  `detjml` int(11) NOT NULL,
+  `detsubtotal` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -78,6 +107,35 @@ CREATE TABLE `detail_barangmasuk` (
   `detjml` int(11) NOT NULL,
   `detsubtotal` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `detail_barangmasuk`
+--
+
+INSERT INTO `detail_barangmasuk` (`iddetail`, `detfaktur`, `detbrgkode`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`) VALUES
+(25, 'F-001', 'pb001', 180000, 190000, 10, 1800000);
+
+--
+-- Trigger `detail_barangmasuk`
+--
+DELIMITER $$
+CREATE TRIGGER `tri_kurangi_stok_barang` AFTER DELETE ON `detail_barangmasuk` FOR EACH ROW BEGIN
+UPDATE barang SET brgstok = brgstok - old.detjml WHERE brgkode = old.detbrgkode;
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `tri_tambah_stok_barang` AFTER INSERT ON `detail_barangmasuk` FOR EACH ROW BEGIN
+	UPDATE barang SET brgstok = brgstok+NEW.detjml WHERE brgkode = NEW.detbrgkode;
+    END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `tri_update_stok_barang` AFTER UPDATE ON `detail_barangmasuk` FOR EACH ROW BEGIN
+UPDATE barang SET brgstok = (brgstok - old.detjml) + new.detjml WHERE brgkode = new.detbrgkode;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -125,6 +183,19 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `pelanggan`
+--
+
+CREATE TABLE `pelanggan` (
+  `pelid` int(11) NOT NULL,
+  `pelnama` varchar(100) NOT NULL,
+  `peltelp` char(20) NOT NULL,
+  `pelalamat` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `satuan`
 --
 
@@ -144,6 +215,21 @@ INSERT INTO `satuan` (`satid`, `satnama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `temp_barangkeluar`
+--
+
+CREATE TABLE `temp_barangkeluar` (
+  `id` bigint(20) NOT NULL,
+  `detfaktur` char(20) NOT NULL,
+  `detbrgkode` char(20) NOT NULL,
+  `dethargajual` double NOT NULL,
+  `detjml` int(11) NOT NULL,
+  `detsubtotal` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `temp_barangmasuk`
 --
 
@@ -158,14 +244,6 @@ CREATE TABLE `temp_barangmasuk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `temp_barangmasuk`
---
-
-INSERT INTO `temp_barangmasuk` (`iddetail`, `detfaktur`, `detbrgkode`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`) VALUES
-(2, 'f-001', 'pb001', 180000, 190000, 10, 1800000),
-(3, '1', 'pb001', 180000, 190000, 1, 180000);
-
---
 -- Indexes for dumped tables
 --
 
@@ -178,10 +256,22 @@ ALTER TABLE `barang`
   ADD KEY `barang_brgsatid_foreign` (`brgsatid`);
 
 --
+-- Indeks untuk tabel `barangkeluar`
+--
+ALTER TABLE `barangkeluar`
+  ADD PRIMARY KEY (`faktur`);
+
+--
 -- Indeks untuk tabel `barangmasuk`
 --
 ALTER TABLE `barangmasuk`
   ADD PRIMARY KEY (`faktur`);
+
+--
+-- Indeks untuk tabel `detail_barangkeluar`
+--
+ALTER TABLE `detail_barangkeluar`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `detail_barangmasuk`
@@ -204,10 +294,22 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `pelanggan`
+--
+ALTER TABLE `pelanggan`
+  ADD PRIMARY KEY (`pelid`);
+
+--
 -- Indeks untuk tabel `satuan`
 --
 ALTER TABLE `satuan`
   ADD KEY `satid` (`satid`);
+
+--
+-- Indeks untuk tabel `temp_barangkeluar`
+--
+ALTER TABLE `temp_barangkeluar`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `temp_barangmasuk`
@@ -220,10 +322,16 @@ ALTER TABLE `temp_barangmasuk`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `detail_barangkeluar`
+--
+ALTER TABLE `detail_barangkeluar`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `detail_barangmasuk`
 --
 ALTER TABLE `detail_barangmasuk`
-  MODIFY `iddetail` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iddetail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
@@ -238,16 +346,28 @@ ALTER TABLE `migrations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT untuk tabel `pelanggan`
+--
+ALTER TABLE `pelanggan`
+  MODIFY `pelid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `satuan`
 --
 ALTER TABLE `satuan`
   MODIFY `satid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT untuk tabel `temp_barangkeluar`
+--
+ALTER TABLE `temp_barangkeluar`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `temp_barangmasuk`
 --
 ALTER TABLE `temp_barangmasuk`
-  MODIFY `iddetail` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `iddetail` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

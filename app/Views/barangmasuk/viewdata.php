@@ -12,7 +12,7 @@
 
 <div class="card">
     <div class="card-header">
-        <?= form_button('', '<i class="fa fa-plus-circle"></i> Tambah Data', [
+        <?= form_button('', '<i class="fa fa-plus-circle"></i> Input Faktur', [
             'class'     => 'btn btn-sm btn-primary',
             'onclick'   => "location.href=('" . site_url('barangmasuk/index') . "')"
         ]) ?>
