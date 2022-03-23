@@ -64,6 +64,10 @@ function editItem(id) {
                 $('#hargajual').val(data.hargajual);
                 $('#hargabeli').val(data.hargabeli);
                 $('#jumlah').val(data.jumlah);
+
+                $('#tombolEditItem').fadeIn();
+                $('#tombolReload').fadeIn();
+                $('#tombolTambahItem').fadeOut();
             }
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -85,14 +89,15 @@ function hapusItem(id) {
         if (result.isConfirmed) {
             $.ajax({
                 type: "post",
-                url: "/barangmasuk/hapus",
+                url: "/barangmasuk/hapusItemDetail",
                 data: {
-                    id: id
+                    id: id,
+                    faktur: $('#faktur').val()
                 },
                 dataType: "json",
                 success: function(response) {
                     if (response.sukses) {
-                        dataTemp();
+                        dataDetail();
                         Swal.fire({
                             icon: 'success',
                             title: 'Berhasil',
