@@ -39,7 +39,7 @@ class Barangkeluar extends BaseController
 
 
         $json = [
-            'nofaktur' = $noFaktur
+            'nofaktur' => $noFaktur
         ];
 
         echo json_encode($json);

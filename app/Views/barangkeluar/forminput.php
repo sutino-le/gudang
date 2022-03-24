@@ -138,6 +138,7 @@
 
 </div>
 
+<div class="viewmodal" style="display: none;"></div>
 
 <script>
 function buatNoFaktur() {
@@ -163,6 +164,43 @@ function buatNoFaktur() {
 $(document).ready(function() {
     $('#tglfaktur').change(function(e) {
         buatNoFaktur();
+    });
+
+    $('#tombolTambahPelanggan').click(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "post",
+            url: "/pelanggan/formtambah",
+            dataType: "json",
+            success: function(response) {
+                if (response.data) {
+                    $('.viewmodal').html(response.data).show();
+                    $('#modaltambahpelanggan').modal('show');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + '\n' + thrownError);
+            }
+        });
+    });
+
+
+
+    $('#tombolCariPelanggan').click(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: "/pelanggan/modalData",
+            dataType: "json",
+            success: function(response) {
+                if (response.data) {
+                    $('.viewmodal').html(response.data).show();
+                    $('#modaldatapelanggan').modal('show');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + '\n' + thrownError);
+            }
+        });
     });
 });
 </script>

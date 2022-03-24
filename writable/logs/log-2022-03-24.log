@@ -1,0 +1,73 @@
+CRITICAL - 2022-03-24 08:04:25 --> syntax error, unexpected '=', expecting ']'
+#0 C:\xampp\htdocs\gudang\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('barangkeluar/da...')
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('barangkeluar/da...')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-24 09:59:12 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\gudang\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('pelanggan/formt...')
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('pelanggan/formt...')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-24 15:18:05 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::orderBy() must be of the type string, null given, called in C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php on line 44
+#0 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(44): CodeIgniter\Database\BaseBuilder->orderBy(NULL, 'asc')
+#1 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(52): App\Models\ModelDataPelanggan->_get_datatables_query()
+#2 C:\xampp\htdocs\gudang\app\Controllers\Pelanggan.php(101): App\Models\ModelDataPelanggan->get_datatables()
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Pelanggan->listData()
+#4 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#5 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 15:18:43 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::orderBy() must be of the type string, null given, called in C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php on line 44
+#0 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(44): CodeIgniter\Database\BaseBuilder->orderBy(NULL, 'asc')
+#1 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(52): App\Models\ModelDataPelanggan->_get_datatables_query()
+#2 C:\xampp\htdocs\gudang\app\Controllers\Pelanggan.php(101): App\Models\ModelDataPelanggan->get_datatables()
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Pelanggan->listData()
+#4 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#5 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 15:18:50 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::orderBy() must be of the type string, null given, called in C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php on line 44
+#0 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(44): CodeIgniter\Database\BaseBuilder->orderBy(NULL, 'asc')
+#1 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(52): App\Models\ModelDataPelanggan->_get_datatables_query()
+#2 C:\xampp\htdocs\gudang\app\Controllers\Pelanggan.php(101): App\Models\ModelDataPelanggan->get_datatables()
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Pelanggan->listData()
+#4 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#5 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 15:21:53 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::orderBy() must be of the type string, null given, called in C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php on line 44
+#0 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(44): CodeIgniter\Database\BaseBuilder->orderBy(NULL, 'desc')
+#1 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(52): App\Models\ModelDataPelanggan->_get_datatables_query()
+#2 C:\xampp\htdocs\gudang\app\Controllers\Pelanggan.php(101): App\Models\ModelDataPelanggan->get_datatables()
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Pelanggan->listData()
+#4 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#5 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 15:53:47 --> Call to undefined function App\Controllers\ModelPelanggan()
+#0 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Pelanggan->hapus()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-24 16:18:11 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::orderBy() must be of the type string, null given, called in C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php on line 44
+#0 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(44): CodeIgniter\Database\BaseBuilder->orderBy(NULL, 'asc')
+#1 C:\xampp\htdocs\gudang\app\Models\ModelDataPelanggan.php(53): App\Models\ModelDataPelanggan->_get_datatables_query()
+#2 C:\xampp\htdocs\gudang\app\Controllers\Pelanggan.php(101): App\Models\ModelDataPelanggan->get_datatables()
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Pelanggan->listData()
+#4 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#5 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
