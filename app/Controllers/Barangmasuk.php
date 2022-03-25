@@ -57,7 +57,7 @@ class Barangmasuk extends BaseController
             } else {
                 $data   = [
                     'judul'     => 'Home',
-                    'subjudul'  => 'Input Faktur',
+                    'subjudul'  => 'Input Faktur Pembelian',
                     'namabarang'    => $ambilData['brgnama'],
                     'hargajual'     => $ambilData['brgharga']
                 ];

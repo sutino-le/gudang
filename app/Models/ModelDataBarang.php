@@ -5,12 +5,12 @@ namespace App\Models;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\Model;
 
-class ModelDataPelanggan extends Model
+class ModelDatabarang extends Model
 {
-    protected $table = "pelanggan";
-    protected $column_order = array(null, 'pelnama', 'peltelp', 'pelalamat', null);
-    protected $column_search = array('pelnama', 'peltelp', 'pelalamat');
-    protected $order = array('pelnama' => 'ASC');
+    protected $table = "barang";
+    protected $column_order = array(null, 'brgkode', 'brgnama', 'brgharga', 'brgstok', null);
+    protected $column_search = array('brgkode', 'brgnama');
+    protected $order = array('brgnama' => 'ASC');
     protected $request;
     protected $db;
     protected $dt;

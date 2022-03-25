@@ -113,12 +113,19 @@
                             <label for="">#</label>
                             <div class="input-group">
                                 <button type="button" class="btn btn-success" title="Simpan Item" id="tombolSimpanItem">
-                                    <i class="fas fa-save"></i>
+                                    <i class="fas fa-plus-square"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
 
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12 tampilDataTemp">
+
+                    </div>
                 </div>
 
             </li>
@@ -141,6 +148,115 @@
 <div class="viewmodal" style="display: none;"></div>
 
 <script>
+function kosong() {
+    $('#kodebarang').val('');
+    $('#namabarang').val('');
+    $('#hargajual').val('');
+    $('#jml').val('1');
+    $('#kodebarang').focus();
+}
+
+function simpanItem() {
+    let nofaktur = $('#nofaktur').val();
+    let kodebarang = $('#kodebarang').val();
+    let namabarang = $('#namabarang').val();
+    let hargajual = $('#hargajual').val();
+    let jml = $('#jml').val();
+
+    if (kodebarang.length == 0) {
+        swal.fire('Gagal', 'Kode barang harus diinput', 'error');
+        kosong();
+    } else {
+        $.ajax({
+            type: "post",
+            url: "/barangkeluar/simpanItem",
+            data: {
+                nofaktur: nofaktur,
+                kodebarang: kodebarang,
+                namabarang: namabarang,
+                hargajual: hargajual,
+                jml: jml
+            },
+            dataType: "json",
+            success: function(response) {
+                if (response.error) {
+                    swal.fire('Error', response.error, 'error');
+                    kosong();
+                }
+                if (response.sukses) {
+                    tampilDataTemp();
+                    kosong();
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + '\n' + thrownError);
+            }
+        });
+    }
+}
+
+
+function ambilDataBarang() {
+    let kodebarang = $('#kodebarang').val();
+    if (kodebarang.length == 0) {
+        swal.fire('Error', 'Kode barang harus diinput', 'error');
+        kosong();
+    } else {
+        $.ajax({
+            type: "post",
+            url: "/barangkeluar/ambilDataBarang",
+            data: {
+                kodebarang: kodebarang
+            },
+            dataType: "json",
+            success: function(response) {
+                if (response.error) {
+                    swal.fire('Error', response.error, 'error');
+                    kosong();
+                }
+
+                if (response.sukses) {
+                    let data = response.sukses;
+
+                    $('#namabarang').val(data.namabarang);
+                    $('#hargajual').val(data.hargajual);
+
+                    $('#jml').focus();
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + '\n' + thrownError);
+            }
+        });
+    }
+
+}
+
+
+function tampilDataTemp() {
+    let faktur = $('#nofaktur').val();
+    $.ajax({
+        type: "post",
+        url: "/barangkeluar/tampilDataTemp",
+        data: {
+            nofaktur: faktur
+        },
+        dataType: "json",
+        beforeSend: function() {
+            $('.tampilDataTemp').html("<i class='fas fa-spin fa-spinner'></i>");
+        },
+        success: function(response) {
+            if (response.data) {
+                $('.tampilDataTemp').html(response.data);
+            }
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(xhr.status + '\n' + thrownError);
+        }
+    });
+}
+
+
 function buatNoFaktur() {
     let tanggal = $('#tglfaktur').val();
 
@@ -153,6 +269,7 @@ function buatNoFaktur() {
         dataType: "json",
         success: function(response) {
             $('#nofaktur').val(response.nofaktur);
+            tampilDataTemp();
         },
         error: function(xhr, ajaxOptions, thrownError) {
             alert(xhr.status + '\n' + thrownError);
@@ -162,6 +279,7 @@ function buatNoFaktur() {
 }
 
 $(document).ready(function() {
+    tampilDataTemp();
     $('#tglfaktur').change(function(e) {
         buatNoFaktur();
     });
@@ -202,6 +320,71 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('#kodebarang').keydown(function(e) {
+        if (e.keyCode == 13) {
+            e.preventDefault();
+            ambilDataBarang();
+        }
+    });
+
+    $('#tombolSimpanItem').click(function(e) {
+        e.preventDefault();
+        simpanItem();
+    });
+
+    $('#tombolCariBarang').click(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: "/barangkeluar/modalCariBarang",
+            dataType: "json",
+            success: function(response) {
+                if (response.data) {
+                    $('.viewmodal').html(response.data).show();
+                    $('#modalcaribarang').modal('show');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + '\n' + thrownError);
+            }
+        });
+    });
+
+    $('#tombolSelesaiTransaksi').click(function(e) {
+        e.preventDefault();
+        let idpelanggan = $('#idpelanggan').val();
+        if (idpelanggan.length == 0) {
+            swal.fire('Gagal', 'Pelanggan harus diinput', 'error');
+            kosong();
+        } else {
+            $.ajax({
+                type: "post",
+                url: "/barangkeluar/modalPembayaran",
+                data: {
+                    nofaktur: $('#nofaktur').val(),
+                    tglfaktur: $('#tglfaktur').val(),
+                    idpelanggan: idpelanggan,
+                    totalharga: $('#totalharga').val()
+                },
+                dataType: "json",
+                success: function(response) {
+                    if (response.error) {
+                        swal.fire('Error', response.error, 'error');
+                        kosong();
+                    }
+
+                    if (response.data) {
+                        $('.viewmodal').html(response.data).show();
+                        $('#modalpembayaran').modal('show');
+                    }
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status + '\n' + thrownError);
+                }
+            });
+        }
+    });
+
 });
 </script>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Mar 2022 pada 10.58
+-- Waktu pembuatan: 25 Mar 2022 pada 11.58
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.26
 
@@ -55,7 +55,9 @@ CREATE TABLE `barangkeluar` (
   `faktur` char(20) NOT NULL,
   `tglfaktur` date NOT NULL,
   `idpel` int(11) NOT NULL,
-  `totalharga` double NOT NULL
+  `totalharga` double NOT NULL,
+  `jumlahuang` double NOT NULL,
+  `sisauang` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -193,6 +195,13 @@ CREATE TABLE `pelanggan` (
   `pelalamat` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `pelanggan`
+--
+
+INSERT INTO `pelanggan` (`pelid`, `pelnama`, `peltelp`, `pelalamat`) VALUES
+(3, 'Tino', '085810100913', 'Kalideres');
+
 -- --------------------------------------------------------
 
 --
@@ -226,6 +235,13 @@ CREATE TABLE `temp_barangkeluar` (
   `detjml` int(11) NOT NULL,
   `detsubtotal` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `temp_barangkeluar`
+--
+
+INSERT INTO `temp_barangkeluar` (`id`, `detfaktur`, `detbrgkode`, `dethargajual`, `detjml`, `detsubtotal`) VALUES
+(5, '2503220001', 'pb001', 190000, 1, 190000);
 
 -- --------------------------------------------------------
 
@@ -325,7 +341,7 @@ ALTER TABLE `temp_barangmasuk`
 -- AUTO_INCREMENT untuk tabel `detail_barangkeluar`
 --
 ALTER TABLE `detail_barangkeluar`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `detail_barangmasuk`
@@ -349,7 +365,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `pelid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `pelid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `satuan`
@@ -361,7 +377,7 @@ ALTER TABLE `satuan`
 -- AUTO_INCREMENT untuk tabel `temp_barangkeluar`
 --
 ALTER TABLE `temp_barangkeluar`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `temp_barangmasuk`

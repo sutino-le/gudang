@@ -117,8 +117,7 @@
     </div>
 
 </div>
-
-
+<script src="<?= base_url('dist/js/autoNumeric.js') ?>"></script>
 <script>
 function dataTemp() {
     let faktur = $('#faktur').val();
@@ -166,7 +165,14 @@ function ambilDataBarang() {
                 $('#namabarang').val(data.namabarang);
                 $('#hargajual').val(data.hargajual);
 
+                $('#hargajual').autoNumeric('init', {
+                    mDec: 0,
+                    aDec: ',',
+                    aSep: '.',
+                });
+
                 $('#hargabeli').focus();
+
             }
 
             if (response.error) {
@@ -189,6 +195,7 @@ $(document).ready(function() {
             ambilDataBarang();
         }
     });
+
 
     $('#tombolTambahItem').click(function(e) {
         e.preventDefault();
@@ -316,7 +323,8 @@ $(document).ready(function() {
                                     text: response.sukses
                                 }).then((resul) => {
                                     if (resul.isConfirmed) {
-                                        window.location.reload();
+                                        window.location
+                                            .reload();
                                     }
                                 });
                             }
