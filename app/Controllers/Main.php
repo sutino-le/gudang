@@ -10,7 +10,7 @@ class Main extends BaseController
     {
         $data = [
             'judul'         => 'Home',
-            'subjudul'      => 'Admin',
+            'subjudul'      => 'Awal',
         ];
         return view('main/layout', $data);
     }

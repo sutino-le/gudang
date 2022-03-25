@@ -14,6 +14,8 @@ class ModelDetailBarangKeluar extends Model
 
     public function tampilDataDetail($nofaktur)
     {
-        return $this->table('detail_barangkeluar')->join('barang', 'detbrgkode=brgkode')->where('detfaktur', $nofaktur)->get();
+        return $this->table('detail_barangkeluar')->join('barang', 'detbrgkode=brgkode')
+            ->join('satuan', 'brgsatid=satid')
+            ->where('detfaktur', $nofaktur)->get();
     }
 }

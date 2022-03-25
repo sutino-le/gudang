@@ -7,6 +7,7 @@ use App\Models\Modelbarang;
 use App\Models\ModelBarangKeluar;
 use App\Models\ModelDatabarang;
 use App\Models\ModelDetailBarangKeluar;
+use App\Models\ModelPelanggan;
 use App\Models\ModelTempBarangKeluar;
 use Config\Services;
 
@@ -300,6 +301,32 @@ class Barangkeluar extends BaseController
             ];
 
             echo json_encode($json);
+        }
+    }
+
+    public function cetakFaktur($faktur)
+    {
+        $modelBarangKeluar = new ModelBarangKeluar();
+        $modelDetail = new ModelDetailBarangKeluar();
+        $modelPelanggan = new ModelPelanggan();
+
+        $cekData = $modelBarangKeluar->find($faktur);
+        $dataPelanggan = $modelPelanggan->find($cekData['idpel']);
+
+        $namaPelanggan = ($dataPelanggan != null) ? $dataPelanggan['pelnama'] : '-';
+        if ($cekData != null) {
+            $data = [
+                'faktur'            => $faktur,
+                'tanggal'           => $cekData['tglfaktur'],
+                'namapelanggan'     => $namaPelanggan,
+                'jumlahuang'        => $cekData['jumlahuang'],
+                'sisauang'          => $cekData['sisauang'],
+                'detailbarang'      => $modelDetail->tampilDataDetail($faktur)
+            ];
+
+            return view('barangkeluar/cetakfaktur', $data);
+        } else {
+            return redirect()->to(site_url('barangkeluar/input'));
         }
     }
 }

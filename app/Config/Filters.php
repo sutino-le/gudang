@@ -23,6 +23,10 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'filterAdmin'   => \App\Filters\FilterAdmin::class,
+        'filterKasir'   => \App\Filters\FilterKasir::class,
+        'filterGudang'   => \App\Filters\FilterGudang::class,
+        'filterPimpinan'   => \App\Filters\FilterPimpinan::class,
     ];
 
     /**
@@ -36,11 +40,39 @@ class Filters extends BaseConfig
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
+            'filterAdmin' => [
+                'except' => ['login/*', 'login', '/']
+            ],
+            'filterKasir' => [
+                'except' => ['login/*', 'login', '/']
+            ],
+            'filterGudang' => [
+                'except' => [
+                    'login/*', 'login', '/'
+                ]
+            ],
+            'filterPimpinan' => [
+                'except' => [
+                    'login/*', 'login', '/'
+                ]
+            ]
         ],
         'after' => [
-            'toolbar',
             // 'honeypot',
             // 'secureheaders',
+            'filterAdmin' => [
+                'except' => ['main/*', 'kategori/*', 'satuan/*', 'barang/*', 'barangmasuk/*', 'barangkeluar/*']
+            ],
+            'filterKasir' => [
+                'except' => ['main/*', 'barangkeluar/*']
+            ],
+            'filterGudang' => [
+                'except' => ['main/*', 'barangmasuk/*']
+            ],
+            'filterPimpinan' => [
+                'except' => ['main/*', 'barang/*', 'barangmasuk/*', 'barangkeluar/*']
+            ],
+            'toolbar',
         ],
     ];
 

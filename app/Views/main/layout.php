@@ -7,8 +7,7 @@
     <title>Aplikasi Gudang</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?= base_url() ?>/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
@@ -41,7 +40,7 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
                 <li class="nav-item">
-                    Logout
+                    <a href="<?= site_url('login/keluar') ?>"><i class="fas fa-sign-out-alt"></i> Logout &nbsp;</a>
                 </li>
             </ul>
         </nav>
@@ -51,8 +50,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="<?= base_url() ?>" class="brand-link">
-                <img src="<?= base_url() ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="<?= base_url() ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">App Gudang</span>
             </a>
 
@@ -61,21 +59,71 @@
                 <!-- Sidebar user (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="<?= base_url() ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-                            alt="User Image">
+                        <img src="<?= base_url() ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Administrator</a>
+                        <a href="#" class="d-block">
+                            <?= session()->namauser . ' / ' . session()->levelnama ?>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-                        <li class="nav-item">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <?php
+                        // if (session()->idlevel == 1) :
+                        if (session()->idlevel == 1) {
+                            $master = "show";
+                            $kategori = "show";
+                            $satuan = "show";
+                            $barang = "show";
+
+                            $keluar_masuk = "show";
+                            $barangmasuk = "show";
+                            $barangkeluar = "show";
+                        } else if (session()->idlevel == 2) {
+                            $master = "none";
+                            $kategori = "none";
+                            $satuan = "none";
+                            $barang = "none";
+
+                            $keluar_masuk = "show";
+                            $barangmasuk = "none";
+                            $barangkeluar = "show";
+                        } else if (session()->idlevel == 3) {
+                            $master = "none";
+                            $kategori = "none";
+                            $satuan = "none";
+                            $barang = "none";
+
+                            $keluar_masuk = "show";
+                            $barangmasuk = "show";
+                            $barangkeluar = "none";
+                        } else if (session()->idlevel == 4) {
+                            $master = "show";
+                            $kategori = "none";
+                            $satuan = "none";
+                            $barang = "show";
+
+                            $keluar_masuk = "show";
+                            $barangmasuk = "show";
+                            $barangkeluar = "show";
+                        } else {
+                            $master = "none";
+                            $kategori = "none";
+                            $satuan = "none";
+                            $barang = "none";
+
+                            $keluar_masuk = "none";
+                            $barangmasuk = "none";
+                            $barangkeluar = "none";
+                        }
+
+                        ?>
+
+
+                        <li class="nav-item" style="display: <?= $master ?>;">
                             <a href="#" class="nav-link">
                                 <i class="fas fa-database text-primary"></i>
                                 <p>
@@ -84,19 +132,19 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview ml-2">
-                                <li class="nav-item">
+                                <li class="nav-item" style="display: <?= $kategori ?>;">
                                     <a href="<?= site_url('kategori/index') ?>" class="nav-link">
                                         <i class="fas fa-tasks nav-icon text-warning"></i>
                                         <p>Kategori</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" style="display: <?= $satuan ?>;">
                                     <a href="<?= site_url('satuan/index') ?>" class="nav-link">
                                         <i class="fa fa-chevron-right nav-icon text-warning"></i>
                                         <p>Satuan</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" style="display: <?= $barang ?>;">
                                     <a href="<?= site_url('barang/index') ?>" class="nav-link">
                                         <i class="fas fa-box-open nav-icon text-info"></i>
                                         <p>Barang</p>
@@ -106,24 +154,22 @@
                         </li>
 
 
-                        <li class="nav-item">
+                        <li class="nav-item" style="display: <?= $keluar_masuk ?>;">
                             <a href="#" class="nav-link">
                                 <i class="fas fa-exchange-alt text-warning"></i>
                                 <p>
-                                    Masuk - Keluar Barang
+                                    Keluar - Masuk
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview ml-2">
-                                <li class="nav-item">
+                                <li class="nav-item" style="display: <?= $barangmasuk ?>;">
                                     <a href="<?= site_url('barangmasuk/data') ?>" class="nav-link">
                                         <i class="fas fa-arrow-right nav-icon text-primary"></i>
                                         <p>Barang Masuk</p>
                                     </a>
                                 </li>
-                            </ul>
-                            <ul class="nav nav-treeview ml-2">
-                                <li class="nav-item">
+                                <li class="nav-item" style="display: <?= $barangkeluar ?>;">
                                     <a href="<?= site_url('barangkeluar/data') ?>" class="nav-link">
                                         <i class="fas fa-arrow-left nav-icon text-danger"></i>
                                         <p>Barang Keluar</p>
@@ -131,6 +177,10 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <?php //endif; 
+                        ?>
+
 
                     </ul>
                 </nav>
@@ -148,18 +198,17 @@
                         <div class="col-sm-6">
                             <?= $this->section('judul') ?>
                             <?php
-                            if ($subjudul != "Admin") {
+                            if ($subjudul != "Awal") {
                                 $judule     = "";
                                 $subjudule  = "";
                             } else {
                                 $judule     = $judul;
-                                $subjudule  = $subjudul;
+                                $subjudule  = session()->levelnama;
                             }
                             ?>
                             <?= $this->endSection('judul') ?>
                             <ol class="breadcrumb float">
-                                <li class="breadcrumb-item"><a
-                                        href="<?= base_url() ?>"><?= $judule; ?><?= $this->renderSection('judul'); ?></a>
+                                <li class="breadcrumb-item"><a href="<?= base_url() ?>"><?= $judule; ?><?= $this->renderSection('judul'); ?></a>
                                 </li>
                                 <li class="breadcrumb-item active">
                                     <?= $subjudule; ?><?= $this->renderSection('subjudul'); ?></li>
