@@ -8,7 +8,7 @@
     <title>Cetak Struk Barang Keluar</title>
 </head>
 
-<body>
+<body onload="window.print();">
     <table border="0" style="width: 100%;">
         <tr style="text-align: center;">
             <td colspan="4">

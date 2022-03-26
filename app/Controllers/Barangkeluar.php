@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\Modelbarang;
 use App\Models\ModelBarangKeluar;
 use App\Models\ModelDatabarang;
+use App\Models\ModelDataBarangKeluar;
 use App\Models\ModelDetailBarangKeluar;
 use App\Models\ModelPelanggan;
 use App\Models\ModelTempBarangKeluar;
@@ -328,5 +329,90 @@ class Barangkeluar extends BaseController
         } else {
             return redirect()->to(site_url('barangkeluar/input'));
         }
+    }
+
+    public function listData()
+    {
+
+        $tglawal = $this->request->getPost('tglawal');
+        $tglakhir = $this->request->getPost('tglakhir');
+
+        $request = Services::request();
+        $datamodel = new ModelDataBarangKeluar($request);
+        if ($request->getMethod(true) == 'POST') {
+            $lists = $datamodel->get_datatables($tglawal, $tglakhir);
+            $data = [];
+            $no = $request->getPost("start");
+            foreach ($lists as $list) {
+                $no++;
+                $row = [];
+
+                $tombolCetak = "<button type=\"button\" class=\"btn btn-sm btn-info\" onclick=\"cetak('" . $list->faktur . "')\" title=\"Cetak\"><i class='fas fa-print'></i></button>";
+                $tombolHapus = "<button type=\"button\" class=\"btn btn-sm btn-danger\" onclick=\"hapus('" . $list->faktur . "')\" title=\"Hapus\"><i class='fas fa-trash-alt'></i></button>";
+                $tombolEdit = "<button type=\"button\" class=\"btn btn-sm btn-primary\" onclick=\"edit('" . $list->faktur . "')\" title=\"Edit\"><i class='fas fa-edit'></i></button>";
+
+                $row[] = $no;
+                $row[] = $list->faktur;
+                $row[] = $list->tglfaktur;
+                $row[] = $list->pelnama;
+                $row[] = number_format($list->totalharga, 0, ",", ".");
+                $row[] = $tombolCetak . ' ' . $tombolHapus . ' ' . $tombolEdit;
+                $data[] = $row;
+            }
+            $output = [
+                "draw" => $request->getPost('draw'),
+                "recordsTotal" => $datamodel->count_all($tglawal, $tglakhir),
+                "recordsFiltered" => $datamodel->count_filtered($tglawal, $tglakhir),
+                "data" => $data
+            ];
+            echo json_encode($output);
+        }
+    }
+
+    function hapusTransaksi()
+    {
+        if ($this->request->isAJAX()) {
+            $faktur = $this->request->getPost('faktur');
+
+            $modelDetail = new ModelDetailBarangKeluar();
+            $modelBarangKeluar = new ModelBarangKeluar();
+
+            // hapus detail
+            $modelDetail->where(['detfaktur' => $faktur]);
+            $modelDetail->delete();
+            $modelBarangKeluar->delete($faktur);
+
+            $json = [
+                'sukses' => 'Barang keluar berhasil dihapus'
+            ];
+
+            echo json_encode($json);
+        }
+    }
+
+    public function edit($faktur)
+    {
+        $modelBarangKeluar = new ModelBarangKeluar();
+        $rowData = $modelBarangKeluar->find($faktur);
+
+
+        $modelPelanggan = new ModelPelanggan();
+        $rowPelanggan = $modelPelanggan->find($rowData['idpel']);
+
+        if ($rowData['idpel'] == 0) {
+            $pelanggan = '';
+        } else {
+            $pelanggan = $rowPelanggan['pelnama'];
+        }
+
+        $data = [
+            'judul'                 => 'Home',
+            'subjudul'              => 'Edit Faktur Penjualan',
+            'nofaktur'              => $faktur,
+            'tanggal'               => $rowData['tglfaktur'],
+            'namapelanggan'         => $pelanggan
+        ];
+
+        return view('barangkeluar/formedit', $data);
     }
 }

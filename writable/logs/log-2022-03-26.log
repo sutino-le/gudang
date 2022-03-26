@@ -10,3 +10,67 @@ CRITICAL - 2022-03-26 00:12:17 --> Undefined index: detharga
 #8 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #10 {main}
+CRITICAL - 2022-03-26 12:24:45 --> Too few arguments to function App\Models\ModelDataBarangKeluar::count_all(), 0 passed in C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php on line 363 and exactly 2 expected
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(363): App\Models\ModelDataBarangKeluar->count_all()
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->listData()
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-26 13:10:17 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(405): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 405, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->edit('2503220002')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-26 13:10:59 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(405): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 405, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->edit('2503220002')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-26 13:11:23 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(407): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 407, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->edit('2503220002')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-26 13:11:25 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(407): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 407, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->edit('2503220002')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-26 13:11:25 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(407): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 407, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->edit('2503220002')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-26 13:11:26 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(407): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 407, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->edit('2503220002')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-26 13:11:26 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gudang\app\Controllers\Barangkeluar.php(407): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 407, Array)
+#1 C:\xampp\htdocs\gudang\system\CodeIgniter.php(832): App\Controllers\Barangkeluar->edit('2503220002')
+#2 C:\xampp\htdocs\gudang\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangkeluar))
+#3 C:\xampp\htdocs\gudang\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudang\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\gudang\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

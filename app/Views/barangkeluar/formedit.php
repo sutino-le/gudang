@@ -11,10 +11,10 @@
 <?= $this->section('isi') ?>
 
 <style>
-.list-group-flush {
-    height: 400px;
-    overflow-y: auto;
-}
+    .list-group-flush {
+        height: 400px;
+        overflow-y: auto;
+    }
 </style>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 <div class='card'>
@@ -34,12 +34,13 @@
         <ul class='list-group list-group-flush'>
             <li class='list-group-item'>
 
+
+
+
+            </li>
+        </ul>
+
     </div>
-
-    </li>
-    </ul>
-
-</div>
 
 </div>
 

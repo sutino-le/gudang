@@ -61,10 +61,10 @@ class Filters extends BaseConfig
             // 'honeypot',
             // 'secureheaders',
             'filterAdmin' => [
-                'except' => ['main/*', 'kategori/*', 'satuan/*', 'barang/*', 'barangmasuk/*', 'barangkeluar/*']
+                'except' => ['main/*', 'kategori/*', 'satuan/*', 'barang/*', 'barangmasuk/*', 'barangkeluar/*', 'pelanggan/*']
             ],
             'filterKasir' => [
-                'except' => ['main/*', 'barangkeluar/*']
+                'except' => ['main/*', 'barangkeluar/*', 'pelanggan/*']
             ],
             'filterGudang' => [
                 'except' => ['main/*', 'barangmasuk/*']
